@@ -31,4 +31,12 @@ public class SpawnManager : MonoBehaviour
         randomPos = new Vector3(spawnPosX, 0, spawnPosZ);
         return randomPos;
     }
+
+    private void SpawnEnemyWave ()
+    {
+        for(int i = 0; i < 3; i++)
+        {
+            Instantiate(enemyPrefab, GenerateSpawnPosition(), enemyPrefab.transform.rotation);
+        }
+    }
 }
