@@ -181,12 +181,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 11a653b9169986c4f9436a3002fb4516, type: 3}
---- !u!1 &127506369 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1758629138285362, guid: 11a653b9169986c4f9436a3002fb4516,
-    type: 3}
-  m_PrefabInstance: {fileID: 127506368}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &245963551
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -292,6 +286,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 8950860093811545573, guid: c3488d4938335ea419481349b6f940ad,
     type: 3}
+  powerupPrefab: {fileID: 0}
+  enemyCount: 0
+  waveNumber: 0
 --- !u!4 &645678176
 Transform:
   m_ObjectHideFlags: 0
@@ -603,8 +600,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasPowerup: 0
-  speed: 0
-  powerIndicator: {fileID: 127506369}
+  speed: 3
+  powerupIndicator: {fileID: 0}
 --- !u!1001 &1403545340
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -723,7 +720,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4174d6232f656664aadaa9916998b055, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: 0
+  rotationSpeed: 30
 --- !u!4 &1497060192
 Transform:
   m_ObjectHideFlags: 0
