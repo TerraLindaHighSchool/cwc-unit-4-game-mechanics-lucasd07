@@ -5,6 +5,7 @@ using UnityEngine;
 public class SpawnManager : MonoBehaviour
 {
     [SerializeField] private GameObject enemyPrefab;
+    [SerializeField] private int enemyCount;
 
     private float spawnRange = 9;
     private float spawnPosX;
@@ -16,13 +17,20 @@ public class SpawnManager : MonoBehaviour
     void Start()
     {        
         Instantiate(enemyPrefab, GenerateSpawnPosition(), enemyPrefab.transform.rotation);
-        SpawnEnemyWave(3);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if(transform.position.y < 10)
+        {
+            Destroy(gameObject);
+        }
+        enemyCount = FindObjectsOfType<Enemy>().Length;
+        if(enemyCount == 0)
+        {
+            SpawnEnemyWave(1);
+        }
     }
 
     private Vector3 GenerateSpawnPosition ()
